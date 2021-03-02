@@ -27,7 +27,7 @@ public class RestoreSqlForSelection extends AnAction {
     private static String prevLine = "";
 
     public RestoreSqlForSelection(){
-        super(null,null, Icons.MyBatisIcon);
+        super("MyBatis log",null, Icons.MyBatisIcon);
     }
 
     @Override
@@ -67,11 +67,11 @@ public class RestoreSqlForSelection extends AnAction {
                     }
                 }
             } else {
-                PrintUtil.println(project, "Can't restore sql from selection.", PrintUtil.getOutputAttributes(null, Color.yellow));
+                PrintUtil.println(project, "-- Can't restore sql from selection.", PrintUtil.getOutputAttributes(null, Color.yellow));
                 PrintUtil.println(project, StringConst.SPLIT_LINE, ConsoleViewContentType.USER_INPUT);
             }
         } else {
-            PrintUtil.println(project, "Can't restore sql from selection.", PrintUtil.getOutputAttributes(null, Color.yellow));
+            PrintUtil.println(project, "-- Can't restore sql from selection.", PrintUtil.getOutputAttributes(null, Color.yellow));
             PrintUtil.println(project, StringConst.SPLIT_LINE, ConsoleViewContentType.USER_INPUT);
         }
     }

@@ -37,7 +37,7 @@ public class MyBatisLogFilter implements Filter {
                 }
             }
             if(currentLine.contains(StringConst.PARAMETERS) && StringHelper.isNotEmpty(prevLine) && prevLine.contains(StringConst.PREPARING)) {
-                String preStr = configVo.getIndexNum() + "  " + currentLine.split(StringConst.PARAMETERS)[0].trim();
+                String preStr = "--  "+configVo.getIndexNum() + "  " + currentLine.split(StringConst.PARAMETERS)[0].trim();
                 configVo.setIndexNum(configVo.getIndexNum() + 1);
                 String restoreSql = RestoreSqlUtil.restoreSql(prevLine, currentLine);
                 PrintUtil.println(project, preStr, ConsoleViewContentType.USER_INPUT);

@@ -44,7 +44,7 @@ public class TailRunExecutor extends Executor {
 
 	@Override
 	public Icon getDisabledIcon() {
-		return AllIcons.Process.DisabledRun;
+		return AllIcons.RunConfigurations.ToolbarPassed;
 	}
 
 	@Override
